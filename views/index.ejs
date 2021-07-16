@@ -2,15 +2,18 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Welcome, <%= user ? user.profile.name : "Golfer" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
     </div>
   <% } %>
+  <h1>Welcome to Scourse Card!</h1>
+  <img src="https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/2020/08/78_golf-course-logo.png" alt="golf logo">
+  <section>
+    <h2>Welcome to Scourse Card! Here you can keep
+    track of your favorite golf courses while 
+    competing with your friends and fellow golfers through your best golf scores!</h2>
+  </section>
 </main>
 
 <%- include('./partials/footer') %>
