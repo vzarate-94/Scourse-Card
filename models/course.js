@@ -1,14 +1,17 @@
-import mongoose, { Schema } from 'mongoose'
+import mongoose from 'mongoose'
 
 export {
   Course,
 }
 
-const courseSchema = new Schema({
+const courseSchema = mongoose.Schema({
   courseName: {
     type: String,
     required: true,
   },
+  datePlayed: {
+    type: Date
+  }
 }, {
   timestamps: true,
 })
