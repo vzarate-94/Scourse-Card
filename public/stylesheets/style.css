@@ -28,11 +28,11 @@ body {
 
 nav {
   background-color: rgba(18, 96, 3, .3);
-  height: 80px;
-  font-size: 1.6rem;
+  height: 70px;
+  font-size: 1.9rem;
   display: flex;
-  justify-content: flex-end;
-  padding-top: 15px;
+  justify-content: space-around;
+  padding-top: 25px;
 }
 
 main {
