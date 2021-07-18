@@ -1,11 +1,13 @@
 import { Router } from 'express'
-const router = Router()
 import * as coursesCtrl from '../controllers/courses.js'
 
 export {
   router
 }
 
+const router = Router()
+
 router.get('/', coursesCtrl.index)
-router.get('/new', coursesCtrl.new)
+router.get('/:courseId', coursesCtrl.show)
+router.post('/', coursesCtrl.create)
 

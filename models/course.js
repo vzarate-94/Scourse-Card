@@ -11,7 +11,7 @@ const courseSchema = mongoose.Schema({
   },
   datePlayed: {
     type: Date
-  }
+  },
 }, {
   timestamps: true,
 })
