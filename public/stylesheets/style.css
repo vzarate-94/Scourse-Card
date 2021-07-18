@@ -53,3 +53,7 @@ section {
   justify-content: center;
   flex-direction: column;
 }
+
+li {
+  font-size: 1.9rem;
+}
