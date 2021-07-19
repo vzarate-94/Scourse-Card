@@ -5,6 +5,7 @@ export {
 }
 
 const golfRoundsSchema = new mongoose.Schema({
+  owner: {type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true}, 
   score: Number,
   price: Number,
 })

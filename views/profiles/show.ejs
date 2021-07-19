@@ -27,7 +27,16 @@
         <button type="submit">Add golf round</button>
       </form>
     <% } %>
-    <h2></h2>
+    <% if (profile.golfRounds.length) { %>
+      <h2>
+        <%= isSelf ? "You played" : `${profile.name} has played` %> these rounds!
+      </h2>
+      <% profile.golfRounds.forEach(golfRound => { %>
+        <h3>
+          <%= `Score of ${golfRound.score} and paid ${golfRound.price}` %>
+        </h3>
+      <% })%>
+    <% } %>
   </section>
 </main>
 
