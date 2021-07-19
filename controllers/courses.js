@@ -4,11 +4,27 @@ export {
   index,
   create,
   show,
+  createGolfRounds,
+}
+
+function createGolfRounds(req, res) {
+  Course.findById(req.params._id)
+  .then(course => {
+    course.golfRounds.push(req.body)
+    course.golfRounds.save()
+    .then (() => {
+      res.redirect(`/courses/${req.params._id}`)
+    })
+    console.log(golfRounds)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/courses')
+  })
 }
 
 function show(req, res) {
   Course.findById(req.params.courseId)
-  .populate("owner")
   .then(course => {
     res.render('courses/show', {
       course,

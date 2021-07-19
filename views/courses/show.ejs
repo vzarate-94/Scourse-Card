@@ -4,7 +4,33 @@
 
 <main>
   <h1><%= course.courseName%></h1>
-  <h2>Rounds played by fellow Scourse Card users:</h2>
+    <h2>Rounds played by fellow Scourse Card users:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Golfer</th>
+          <th>Score</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+    </table>
+  <section>
+    <% if (user) { %>
+      <h2>Add a golf Round you played at <%= course.courseName %>:</h2>
+      <form action="/courses/ <%= course._id %>/golfRounds" method="POST">
+        <label>
+          Score:
+          <input type="text" name="score">
+        </label>
+        <label>
+          Price:
+          <input type="text" name="price">
+        </label>
+        <button type="submit">Add golf round</button>
+      </form>
+    <% } %>
+    <h2></h2>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

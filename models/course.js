@@ -4,7 +4,13 @@ export {
   Course,
 }
 
-const courseSchema = mongoose.Schema({
+const golfRoundsSchema = new mongoose.Schema({
+  score: Number,
+  Price: Number,
+  owner: {type: mongoose.Schema.Types.ObjectId, ref:'Course'} 
+})
+
+const courseSchema = new mongoose.Schema({
   courseName: {
     type: String,
     required: true,
@@ -12,6 +18,7 @@ const courseSchema = mongoose.Schema({
   datePlayed: {
     type: Date
   },
+  golfRounds: [golfRoundsSchema],
 }, {
   timestamps: true,
 })
