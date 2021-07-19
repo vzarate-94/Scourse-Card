@@ -11,7 +11,7 @@
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? "" : profile.name %>!</h1>
+  <h1>It's <%= isSelf ? self.name : profile.name %>!</h1>
 </main>
 
 <%- include('../partials/footer') %>
