@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import * as coursesCtrl from '../controllers/courses.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 export {
   router
