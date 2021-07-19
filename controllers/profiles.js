@@ -4,6 +4,22 @@ export {
   index,
   show,
   createGolfRounds,
+  deleteGolfRounds,
+}
+
+function deleteGolfRounds(req, res) {
+  Profile.findById(req.user.profile)
+  .then(profile => {
+    profile.golfRounds.remove({_id: req.params.id})
+    profile.save()
+    .then(()=> {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
 }
 
 function createGolfRounds(req, res) {
