@@ -17,7 +17,7 @@
   <section>
     <% if (user) { %>
       <h2>Add a golf Round you played at <%= course.courseName %>:</h2>
-      <form action="/courses/ <%= course._id %>/golfRounds" method="POST">
+      <form id="add-round-form" action="/courses/<%= course._id %>/golfRounds" method="POST">
         <label>
           Score:
           <input type="text" name="score">

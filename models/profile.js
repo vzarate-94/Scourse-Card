@@ -4,9 +4,16 @@ export {
   Profile
 }
 
+const golfRoundsSchema = new mongoose.Schema({
+  score: Number,
+  price: Number,
+})
+
+
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
+  golfRounds: [golfRoundsSchema]
 }, {
   timestamps: true
 })

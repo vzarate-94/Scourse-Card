@@ -8,18 +8,15 @@ export {
 }
 
 function createGolfRounds(req, res) {
-  Course.findById(req.params._id)
+  Course.findById(req.params.courseId)
   .then(course => {
     course.golfRounds.push(req.body)
-    course.golfRounds.save()
-    .then (() => {
-      res.redirect(`/courses/${req.params._id}`)
-    })
-    console.log(golfRounds)
+    course.save()
+    res.redirect(`/courses/${req.params.courseId}`)
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/courses')
+    res.redirect(`/courses/${req.params.courseId}`)
   })
 }
 

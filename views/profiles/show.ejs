@@ -12,6 +12,23 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? self.name : profile.name %>!</h1>
+  <section>
+    <% if (user) { %>
+      <h2>Add a golf Round</h2>
+      <form action="/profiles/<%= profile._id %>/golfRounds" method="POST">
+        <label>
+          Score:
+          <input type="text" name="score">
+        </label>
+        <label>
+          Price:
+          <input type="text" name="price">
+        </label>
+        <button type="submit">Add golf round</button>
+      </form>
+    <% } %>
+    <h2></h2>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>
