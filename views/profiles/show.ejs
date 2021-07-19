@@ -31,19 +31,21 @@
       <h2>
         <%= isSelf ? "You played" : `${profile.name} has played` %> these rounds!
       </h2>
-      <% let total = 0 %>
       <% profile.golfRounds.forEach(golfRound => { %>
         <h3>
           <%= `Score of ${golfRound.score} and paid ${golfRound.price}` %>
         </h3>
-        <h3></h3>
-        <% total += golfRound.score %>
-
-          <%=( total / profile.golfRounds.length).toFixed(1) %>
         </h3>
-
       <% })%>
     <% } %>
+    <h2>
+      Avarage Score:
+    </h2>
+    <% let total = 0 %>
+    <% profile.golfRounds.forEach(golfRound => { %>
+    <% total += golfRound.score %>
+    <%=( total / profile.golfRounds.length).toFixed(1) %>
+    <% }) %>
   </section>
 </main>
 
