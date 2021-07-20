@@ -36,7 +36,7 @@
       </h2>
       <% profile.golfRounds.forEach(golfRound => { %>
         <h3>
-          <%= `Score of ${golfRound.score} and paid ${golfRound.price}` %>
+          <%= `${profile.name} played a round at ${golfRound.roundCourse} and shot a ${golfRound.score} and paid $${golfRound.price} for the round.` %>
           <form action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
             <button type="submit">Delete Round</button>
           </form>
