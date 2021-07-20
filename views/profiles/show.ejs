@@ -40,6 +40,11 @@
           <form action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
             <button type="submit">Delete Round</button>
           </form>
+          <% if (isSelf) { %>
+            <h3>
+              <a class="link" href="/profile/<%= golfRound._id %>/edit">Edit Round</a>
+            </h3>
+          <% } %>
         </h3>
         </h3>
       <% })%>

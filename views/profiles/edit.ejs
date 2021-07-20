@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit Your Round</h1>
+  <form action="/profiles/<%= golfRound._id %>?_method=PUT" method="POST">
+  <label>
+    Name:
+    <input type="text" name="roundCourse">
+  </label>
+  <label>
+    Score:
+    <input type="number" name="score">
+    <label>
+    Price:
+    <input type="number" name="price">
+    </label>
+  </label>
+<button type="submit">submit</button>
+</form>
+</section>
+
+<%- include('../partials/footer') %>
