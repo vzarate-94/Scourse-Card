@@ -9,6 +9,7 @@ const courseSchema = new mongoose.Schema({
   courseName: {
     type: String,
     required: true,
+    unique: true,
   },
   datePlayed: {
     type: Date

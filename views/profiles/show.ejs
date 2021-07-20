@@ -11,9 +11,9 @@
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? self.name : profile.name %>!</h1>
+  <h1>It's <%= isSelf ? 'YOU' : profile.name %>!</h1>
   <section>
-    <% if (user) { %>
+    <% if (isSelf) { %>
       <h2>Add a golf Round</h2>
       <form action="/profiles/<%= profile._id %>/golfRounds" method="POST">
         <label>Course Name:
@@ -36,7 +36,7 @@
       </h2>
       <% profile.golfRounds.forEach(golfRound => { %>
         <h3>
-          <%= `${profile.name} played a round at ${golfRound.roundCourse} and shot a ${golfRound.score} and paid $${golfRound.price} for the round.` %>
+          <%= `${profile.name} played a round at ${golfRound.roundCourse} and shot a ${golfRound.score}, while paying $${golfRound.price} for the round.` %>
           <form action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
             <button type="submit">Delete Round</button>
           </form>
@@ -45,7 +45,7 @@
       <% })%>
     <% } %>
     <h2>
-      Avarage Score:
+      <%=`${profile.name}'s Avarage Score is:`%>
     </h2>
     <% let total = 0 %>
     <% profile.golfRounds.forEach(golfRound => { %>

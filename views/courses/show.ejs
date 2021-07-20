@@ -14,23 +14,6 @@
         </tr>
       </thead>
     </table>
-  <section>
-    <% if (user) { %>
-      <h2>Add a golf Round you played at <%= course.courseName %>:</h2>
-      <form id="add-round-form" action="/courses/<%= course._id %>/golfRounds" method="POST">
-        <label>
-          Score:
-          <input type="text" name="score">
-        </label>
-        <label>
-          Price:
-          <input type="text" name="price">
-        </label>
-        <button type="submit">Add golf round</button>
-      </form>
-    <% } %>
-    <h2></h2>
-  </section>
 </main>
 
 <%- include('../partials/footer') %>
