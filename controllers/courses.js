@@ -25,7 +25,7 @@ function show(req, res) {
   .then(course => {
     res.render('courses/show', {
       course,
-      title: "Golf Course Show title"
+      title: "Golf Course Show title",
     })
   })
   .catch(err => {
