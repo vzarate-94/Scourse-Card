@@ -13,6 +13,7 @@ const courseSchema = new mongoose.Schema({
   datePlayed: {
     type: Date
   },
+  
 }, {
   timestamps: true,
 })
