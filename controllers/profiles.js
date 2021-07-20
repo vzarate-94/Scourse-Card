@@ -49,7 +49,6 @@ function show(req,res) {
         profile: profile,
         self: self,
         isSelf: isSelf,
-        courseName: courseName
       })
     })
   })
