@@ -6,6 +6,18 @@ export {
   create,
   show,
   edit,
+  update,
+}
+
+function update(req, res) {
+  Course.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  .then(() => {
+    res.redirect(`/courses/${course._id}`)
+  })
+  .catch((err) => {
+    console.log(err)
+    res.redirect(`/courses`)
+  })
 }
 
 function edit(req, res) {

@@ -5,6 +5,35 @@
 <main>
   <h1><%= course.courseName%></h1>
   <h2><%= `${course.city}, ${course.state} ` %></h2>
+
+  <h2>Edit this course!</h2>
+  <form action="/courses/<%= course._id %>?_method=PUT"
+    method="POST">
+  <label>
+    Name:
+    <input 
+    type="text"
+    name="courseName"
+    value="<%= course.courseName %>" 
+    autocomplete="off">
+  </label>
+  <label>
+    City:
+    <input type="text"
+    name="city"
+    value=" <%= course.city %>"
+    autocomplete="off">
+  </label>
+  <label>
+    State:
+    <input 
+    type="text"
+    name="state"
+    value=" <%= course.state %>"
+    autocomplete="off">
+  </label>
+  <button type="submit">Update</button>
+</form>
 </main>
 
 <%- include('../partials/footer') %>

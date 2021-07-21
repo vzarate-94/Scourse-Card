@@ -14,8 +14,6 @@ const courseSchema = new mongoose.Schema({
   },
   city: String,
   state: String,
-  owner: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
-  
 }, {
   timestamps: true,
 })
