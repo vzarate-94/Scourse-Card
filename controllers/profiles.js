@@ -1,4 +1,5 @@
 import { Profile } from '../models/profile.js'
+import { Course } from '../models/course.js'
 
 export {
   index,

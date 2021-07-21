@@ -4,6 +4,7 @@ export {
   Course,
 }
 
+const Schema = mongoose.Schema
 
 const courseSchema = new mongoose.Schema({
   courseName: {
@@ -11,9 +12,7 @@ const courseSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  datePlayed: {
-    type: Date
-  },
+  players: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   
 }, {
   timestamps: true,
