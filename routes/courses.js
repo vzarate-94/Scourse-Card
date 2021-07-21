@@ -11,5 +11,5 @@ const router = Router()
 router.get('/', coursesCtrl.index)
 router.get('/:courseId', coursesCtrl.show)
 router.post('/', isLoggedIn, coursesCtrl.create)
-// router.get('/:courseId/edit', isLoggedIn, coursesCtrl.edit)
+router.get('/:id/edit', isLoggedIn, coursesCtrl.edit)
 

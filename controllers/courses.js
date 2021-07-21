@@ -5,11 +5,27 @@ export {
   index,
   create,
   show,
+  edit,
 }
+
+function edit(req, res) {
+  Course.findById(req.params.id)
+  .then(course => {
+    res.render('courses/edit', {
+      course,
+      title: "Edit Course",
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/courses')
+  })
+}
+
 
 function show(req, res) {
   Course.findById(req.params.courseId)
-  .populate('profile')
+  .populate('owner')
   .exec(function(err, course) {
     Profile.find({_id: {$nin:
     course.profile}}, function(err, playerNotOnCourse) {
