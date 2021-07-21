@@ -26,6 +26,7 @@ function show(req, res) {
 
 
 function create(req, res) {
+  req.body.owner = req.user.profile
   Course.create(req.body)
   .then(course => {
     res.redirect('/courses')

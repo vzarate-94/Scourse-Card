@@ -10,5 +10,6 @@ const router = Router()
 
 router.get('/', coursesCtrl.index)
 router.get('/:courseId', coursesCtrl.show)
-router.post('/', coursesCtrl.create)
+router.post('/', isLoggedIn, coursesCtrl.create)
+// router.get('/:courseId/edit', isLoggedIn, coursesCtrl.edit)
 

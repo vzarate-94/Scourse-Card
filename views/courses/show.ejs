@@ -6,13 +6,6 @@
   <h1><%= course.courseName%></h1>
   <h2><%= `${course.city}, ${course.state} ` %></h2>
     <h2>Scourse Card users who have played this course:</h2>
-    <ul>
-      <% course.profile.forEach(profile => { %>
-        <li>
-          <%= profile.name %>
-        </li>
-      <% }) %>
-    </ul>
     <form 
     id="add-player-course" 
     action="/courses/<%= course._id %>/profiles" 
