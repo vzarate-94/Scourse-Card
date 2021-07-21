@@ -12,7 +12,9 @@ const courseSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  players: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  profile: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  city: String,
+  state: String,
   
 }, {
   timestamps: true,

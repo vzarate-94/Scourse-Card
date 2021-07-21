@@ -4,16 +4,30 @@
 
 <main>
   <h1><%= course.courseName%></h1>
+  <h2><%= `${course.city}, ${course.state} ` %></h2>
     <h2>Rounds played by fellow Scourse Card users:</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Golfer</th>
-          <th>Score</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-    </table>
+    <ul>
+      <% course.profile.forEach(profile => { %>
+        <li>
+          <%= profile.name %>
+        </li>
+      <% }) %>
+    </ul>
+    <form 
+    id="add-player-course" 
+    action="/courses/<%= course._id %>/profiles" 
+    method="POST"
+  >
+  
+    <select name="profileId">
+      <% playerNotOnCourse.forEach(profile => { %>
+        <option value="<%= profile._id %>"><%= profile.name %> 
+        </option>
+      <% }) %>
+    </select>
+    <button type="submit">Add player to course</button>
+  
+</form>
 </main>
 
 <%- include('../partials/footer') %>
