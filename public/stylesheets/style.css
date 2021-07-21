@@ -64,3 +64,6 @@ ul {
   justify-content: flex-start;
   flex-direction: column;
 }
+form {
+  display: inline;
+}

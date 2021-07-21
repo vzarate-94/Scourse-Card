@@ -6,21 +6,6 @@ export {
   show,
   createGolfRounds,
   deleteGolfRounds,
-  edit,
-}
-
-function edit(req, res) {
-  Profile.findById(req.params.id)
-  .then(profile => {
-    res.render('profiles/edit', {
-      profile,
-      title: "Edit Round"
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/profiles')
-  })
 }
 
 function deleteGolfRounds(req, res) {
