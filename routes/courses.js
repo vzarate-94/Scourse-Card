@@ -12,4 +12,3 @@ router.get('/', coursesCtrl.index)
 router.get('/:courseId', coursesCtrl.show)
 router.post('/', coursesCtrl.create)
 
-

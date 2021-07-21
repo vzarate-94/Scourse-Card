@@ -5,7 +5,7 @@
 <main>
   <h1><%= course.courseName%></h1>
   <h2><%= `${course.city}, ${course.state} ` %></h2>
-    <h2>Rounds played by fellow Scourse Card users:</h2>
+    <h2>Scourse Card users who have played this course:</h2>
     <ul>
       <% course.profile.forEach(profile => { %>
         <li>
@@ -19,7 +19,7 @@
     method="POST"
   >
   
-    <select name="profileId">
+    <select name="profile">
       <% playerNotOnCourse.forEach(profile => { %>
         <option value="<%= profile._id %>"><%= profile.name %> 
         </option>

@@ -7,8 +7,6 @@ export {
   show,
 }
 
-
-
 function show(req, res) {
   Course.findById(req.params.courseId)
   .populate('profile')
