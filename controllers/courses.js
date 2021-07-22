@@ -7,6 +7,17 @@ export {
   show,
   edit,
   update,
+  createReview,
+}
+
+function createReview(req, res) {
+  req.body.recommend = !!req.body.recommend
+  Course.findById(req.params.id, function(err, course) {
+    course.reviews.push(req.body)
+    course.save(function(err) {
+      res.redirect(`/courses/${course._id}`)
+    })
+  })
 }
 
 function update(req, res) {
@@ -54,7 +65,6 @@ function show(req, res) {
 
 
 function create(req, res) {
-  req.body.owner = req.user.profile
   Course.create(req.body)
   .then(course => {
     res.redirect('/courses')

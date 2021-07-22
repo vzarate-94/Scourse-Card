@@ -6,6 +6,12 @@ export {
 
 const Schema = mongoose.Schema
 
+const reviewSchema = new mongoose.Schema({
+  reviewer: String,
+  content: String,
+  recommend: Boolean,
+})
+
 const courseSchema = new mongoose.Schema({
   courseName: {
     type: String,
@@ -14,6 +20,7 @@ const courseSchema = new mongoose.Schema({
   },
   city: String,
   state: String,
+  reviews: [reviewSchema]
 }, {
   timestamps: true,
 })

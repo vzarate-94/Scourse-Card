@@ -6,25 +6,37 @@
   <h1><%= course.courseName%></h1>
   <h2><%= `${course.city}, ${course.state} ` %></h2>
     <h2>Scourse Card users who have played this course:</h2>
-    <form 
-    id="add-player-course" 
-    action="/courses/<%= course._id %>/profiles" 
-    method="POST"
-  >
-  
-    <select name="profile">
-      <% playerNotOnCourse.forEach(profile => { %>
-        <option value="<%= profile._id %>"><%= profile.name %> 
-        </option>
-    </select>
-<% }) %>
-<button type="submit">Add player to course</button>
-</form>
+    
 
 <p>
   <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
 </p>
+<h2>Reviews</h2>
+<ul>
+  <% course.reviews.forEach(review => { %> 
+    <li>
+      <%= `${review.reviewer} recommends this course? ${review.recommend}` %> 
+    </li>
+  <%})%>
+  <li>
 
+  </li>
+</ul>
+<h3>Add a Review</h3>
+<form 
+id="add-review-form" 
+action="/courses/<%= course._id %>/reviews"
+method="POST">
+<label for="name-review">Name:
+  <input type="text" name="reviewer">
+</label>
+<label for="content-textarea">Review:</label>
+<textarea name="content" id="content-textarea"></textarea>
+<label for="recommend-select">Recommend:
+  <input type="checkbox" name="recommend">
+</label>
+<button type="submit">Submit Review</button>
+</form>
 </main>
 
 <%- include('../partials/footer') %>

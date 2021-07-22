@@ -11,6 +11,7 @@ const router = Router()
 router.get('/', coursesCtrl.index)
 router.get('/:courseId', coursesCtrl.show)
 router.post('/', isLoggedIn, coursesCtrl.create)
+router.post('/:id/reviews', isLoggedIn, coursesCtrl.createReview)
 router.get('/:id/edit', isLoggedIn, coursesCtrl.edit)
 router.put('/:id', isLoggedIn, coursesCtrl.update)
 
