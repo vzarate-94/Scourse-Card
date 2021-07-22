@@ -15,12 +15,9 @@
 <ul>
   <% course.reviews.forEach(review => { %> 
     <li>
-      <%= `${review.reviewer} recommends this course? ${review.recommend}` %> 
+      <%= review.reviewer %> <%=review.recommend ? 'recommends' : 'does not recommend' %> this course. Review: "<%= review.content %> "
     </li>
   <%})%>
-  <li>
-
-  </li>
 </ul>
 <h3>Add a Review</h3>
 <form 
