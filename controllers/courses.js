@@ -48,17 +48,15 @@ function edit(req, res) {
 
 function show(req, res) {
   Course.findById(req.params.courseId)
-  .populate('owner')
-  .exec(function(err, course) {
-    Profile.find({_id: {$nin:
-    course.profile}}, function(err, playerNotOnCourse) {
-      res.render('courses/show', {
-        title: 'Course Details',
-        course: course,
-        playerNotOnCourse: playerNotOnCourse,
-        err: err,
-      })
+  .then((course) => {
+    res.render("courses/show", {
+      course,
+      title: "Course show"
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/courses")
   })
 }
 
