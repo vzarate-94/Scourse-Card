@@ -25,6 +25,12 @@ body {
   margin: 0;
 }
 
+#main-index-body {
+  background-image: url(https://i.imgur.com/aXFHIfb.jpg?2);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 nav {
   
   background-color: rgba(183,207,156,255);
@@ -37,6 +43,13 @@ nav {
   position: fixed;
   width: 100%;
   
+}
+
+.welcome-main {
+  color: antiquewhite;
+  font-size: 5.2rem;
+  padding-top: 100px;
+  padding-bottom: 550px;
 }
 
 main {
@@ -104,10 +117,11 @@ a, a:visited, a:hover, a:active {
 }
 
 .profile-golf-rounds {
-  margin-left: 30px;
   display: flex;
   align-self: start;
-  padding-left: 40px;
+  justify-content: center;
+  align-content: center;
+  padding-left: 200px;
 }
 
 #profile-show-img {
