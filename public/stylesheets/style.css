@@ -20,19 +20,23 @@ html {
 body {
   background-color: rgba(249, 249, 13, .15);
   color: rgb(4, 82, 4);
-  /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
   margin: 0;
 }
 
 nav {
+  
   background-color: rgba(18, 96, 3, .3);
+  font-family: 'Poppins';
   height: 70px;
   font-size: 1.9rem;
   display: flex;
   justify-content: space-around;
   padding-top: 25px;
+  position: fixed;
+  width: 100%;
+  
 }
 
 main {
@@ -43,11 +47,11 @@ main {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.9rem;
+  margin-top: 100px;
 }
 
 section {
-  width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,11 +63,15 @@ li {
 }
 
 ul {
-  display: flex;
+  display: inline;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
 form {
   display: inline;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
