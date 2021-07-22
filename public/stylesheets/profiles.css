@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+    font-size: 62.5%
+}
+
+main {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  position: relative;
+  border-radius: 35px;
+}
+
+p {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 85px;
+}
+

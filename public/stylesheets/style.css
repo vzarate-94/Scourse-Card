@@ -27,7 +27,7 @@ body {
 
 nav {
   
-  background-color: rgba(18, 96, 3, .3);
+  background-color: rgba(183,207,156,255);
   font-family: 'Poppins';
   height: 70px;
   font-size: 1.9rem;
@@ -74,4 +74,59 @@ form {
 
 a, a:visited, a:hover, a:active {
   color: inherit;
+}
+
+#intro-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  width: 500px;
+}
+
+#course-index-info {
+  position: relative;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  right: 100px;
+}
+
+.course-info {
+  position: relative;
+  bottom: 25px;
+  left: 200px;
+  display: inline;
+}
+
+.profile-show-main {
+  padding-top: 100px;
+}
+
+.profile-golf-rounds {
+  margin-left: 30px;
+  display: flex;
+  align-self: start;
+  padding-left: 40px;
+}
+
+#profile-show-img {
+  border-radius: 30px;
+}
+
+
+
+
+
+#logo-2 {
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#rights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

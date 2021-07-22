@@ -1,7 +1,7 @@
 <%- include('./partials/html-head') %>
 <link rel="stylesheet" href="stylesheet/style.css">
 <%- include('./partials/nav') %>
-
+<img src="https://i.imgur.com/aXFHIfb.jpg?2" alt="picture-sunset" width="100%">
 <main>
   <h1><%= user ? user.profile.name : "" %></h1>
   <% if (user?.profile.avatar) { %>
@@ -11,9 +11,7 @@
   <h1>Welcome to Scourse Card!</h1>
   <img src="https://media.giphy.com/media/D7TX724G0Fx7mw09Lr/giphy.gif">
   <section>
-    <h2>Welcome to Scourse Card! Here you can keep
-    track of your favorite golf courses while 
-    competing with your friends and fellow golfers through your best golf scores!</h2>
+    <h2 id="intro-message">Welcome to Scourse Card! Here you can keep track of your golf progress, review your favorite golf courses, and compare your recent golf rounds with your friends and fellow golfers!</h2>
   </section>
 </main>
 
