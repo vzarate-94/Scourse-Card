@@ -21,11 +21,18 @@ function createReview(req, res) {
 }
 
 function update(req, res) {
-  Course.findByIdAndUpdate(req.params.id, req.body, { new: true })
-  .then(() => {
-    res.redirect(`/courses/${course._id}`)
+  Course.findById(req.params.id) 
+  .then(course => {
+    if (course.owner.equals(req.user.profile._id)) {
+      course.update(req.body, { new: true })
+      .then(course => {
+        res.redirect(`/courses/${course._id}`)
+      })
+    } else {
+      throw new Error("Not Authorized")
+    }
   })
-  .catch((err) => {
+    .catch((err) => {
     console.log(err)
     res.redirect(`/courses`)
   })
@@ -48,7 +55,8 @@ function edit(req, res) {
 
 function show(req, res) {
   Course.findById(req.params.courseId)
-  .then((course) => {
+  .populate("owner")
+  .then(course => {
     res.render("courses/show", {
       course,
       title: "Course show"
@@ -63,6 +71,7 @@ function show(req, res) {
 
 
 function create(req, res) {
+  req.body.owner = req.user.profile
   Course.create(req.body)
   .then(course => {
     res.redirect('/courses')

@@ -20,7 +20,8 @@ const courseSchema = new mongoose.Schema({
   },
   city: String,
   state: String,
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true,
 })
