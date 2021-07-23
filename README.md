@@ -9,34 +9,24 @@ Apart from coding, my favorite hobby is to golf! I love golf because it's only e
 
 1. Upon initializing the app, the user will be able to go through the main page and decide if they want to check out the golf courses or the golfers.
 
-<img src="https://imgur.com/U7jBaY4" width=250px>
-![image](https://user-images.githubusercontent.com/85314335/124213742-18865e80-dabf-11eb-8480-ffed60ece533.png)
+![image](https://user-images.githubusercontent.com/85314335/126737011-6869cc5d-a973-4643-b3ce-6e1fa073b05e.png)
 
 
-2. The user will then click on a category, and immideately be taken to their first quiz.
-![alt text](https://imgur.com/u83uypQ)
+2. The user without logging in will be able to look at all the courses that have been added.
 
-![image](https://user-images.githubusercontent.com/85314335/124213700-0ad0d900-dabf-11eb-9005-2d799c9d0858.png)
+![image](https://user-images.githubusercontent.com/85314335/126737383-6f3db745-af13-4a3e-9ae8-a03747384b05.png)
 
-3. All categories consist of a 5 question quiz, each question being worth 20 points. 
+3. If the user wants to check out the details of the individual golf courses they will then be sent to the Google login in page.
 
-4. At the end, the user will be told his score out of the possible 100 points. 
-![alt text](https://imgur.com/u83uypQ)
+![image](https://user-images.githubusercontent.com/85314335/126737398-7bfbbdfc-f937-4a40-8e26-1ad04e204cfa.png)
 
-![image](https://user-images.githubusercontent.com/85314335/124212560-2c30c580-dabd-11eb-8ba8-e7ae305b40e2.png)
+4. Once logged in the user will have access to all the profiles, will also be able to add to the golf course lists and add reviews!
 
-5. The home page will automatically come up shortly after finishing your last question from the previous quiz. The user will now have the option to try any of the 4 categories again as many times as they please.
+![image](https://user-images.githubusercontent.com/85314335/126737463-810ec67f-45a6-4dd7-b0af-120bbca4edcb.png)
 
-6. At the top right corner of the application, the user will find a Dark button, the user can click on it to switch between light and dark mode.
-![alt text](https://imgur.com/OxJUIlP)
-6. If the 60 second timer runs out before the user answers all 5 questions. A You Lose message will apear for 3 seconds before sending the user back to the main menu.
+![image](https://user-images.githubusercontent.com/85314335/126737472-402c483f-4e66-4006-97b0-d05a61b41584.png)
 
-![image](https://user-images.githubusercontent.com/85314335/124213563-d0673c00-dabe-11eb-8674-e2d68cb26dc0.png)
-
-
-7. At the top right corner of the application, the user will find a Dark button, the user can click on it to switch between light and dark mode.
-
-![image](https://user-images.githubusercontent.com/85314335/124212592-39e64b00-dabd-11eb-951a-db5a13f4a0fe.png)
+5. The nav bar will display on the screen at all times. Giving the user the option to login or logout whenever they please.
 
 ## **Languages**
 1. Javascript 
@@ -44,14 +34,13 @@ Apart from coding, my favorite hobby is to golf! I love golf because it's only e
 3. HTML
 
 ## **Wireframe**
-For the wireframe I wanted to keep it simple. A quiz can be hard enough, there was no need for me to add too much and make it distracting for the user. 
+For the wireframe I used the green and yellow color scheme from the Masters and I tried to implement that color scheme throughout.
 
-![image](https://user-images.githubusercontent.com/85314335/124214122-bda13700-dabf-11eb-8c56-98ecaccd705c.png)
+![image](https://user-images.githubusercontent.com/85314335/126737666-05ddf9e1-e752-47be-9f69-d1236dfef3fa.png)
 
-
+![image](https://user-images.githubusercontent.com/85314335/126737716-0f371cd4-2bb4-4d62-b7d0-2d87a279fe0d.png)
 
 ## **Next Steps**
-1. Individually style each different quiz box. Depending on the category.
-2. Add more questions to each category, making it much harder.
-3. Add a high score section.
-4. Clean up the code to make it much more concise
+1. Look up the actual formula used to determine a players Handicap and implement that in my app.
+2. I want to expand the reviews Schema. I can add the course conditions, ratings, facitlities, etc!
+3. 
