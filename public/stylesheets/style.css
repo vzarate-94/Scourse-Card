@@ -91,25 +91,24 @@ a, a:visited, a:hover, a:active {
 }
 
 #intro-message {
+  width: 820px;
+  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  width: 500px;
 }
 
 #course-index-info {
   position: relative;
+  text-align: center;
   display: flex;
   justify-content: right;
   flex-direction: row;
-  right: 100px;
+  right: 170px;
 }
 
 .course-info {
   position: relative;
   bottom: 26px;
-  left: 200px;
+  left: 130px;
   display: inline;
 }
 
