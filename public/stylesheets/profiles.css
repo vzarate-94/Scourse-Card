@@ -18,10 +18,10 @@ html {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 160px;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 div {
@@ -29,15 +29,14 @@ div {
   flex-direction: row;
 }
 
-img {
-  position: relative;
+.profile-icon {
   border-radius: 35px;
+  border: 2px solid rgb(4, 82, 4);
 }
 
 p {
-  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 85px;
+  
 }
 
