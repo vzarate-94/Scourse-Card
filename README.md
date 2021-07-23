@@ -28,10 +28,15 @@ Apart from coding, my favorite hobby is to golf! I love golf because it's only e
 
 5. The nav bar will display on the screen at all times. Giving the user the option to login or logout whenever they please.
 
-## **Languages**
-1. Javascript 
-2. CSS 
-3. HTML
+## **Languages and Technologies Used**
+1. MongoDB
+2. Express
+3. Node.js
+4. Google OAuth 2.0
+5. Mongoose
+6. Javascript 
+7. CSS 
+8. HTML
 
 ## **Wireframe**
 For the wireframe I used the green and yellow color scheme from the Masters and I tried to implement that color scheme throughout.
@@ -43,4 +48,5 @@ For the wireframe I used the green and yellow color scheme from the Masters and 
 ## **Next Steps**
 1. Look up the actual formula used to determine a players Handicap and implement that in my app.
 2. I want to expand the reviews Schema. I can add the course conditions, ratings, facitlities, etc!
-3. 
+3. Mobile responsiveness.
+4. Add links to the courses that are added so a player can go directly to the website to book a tee time.
