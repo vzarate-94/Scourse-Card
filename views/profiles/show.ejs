@@ -13,47 +13,47 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? 'YOU' : profile.name %>!</h1>
-  <h2>
-    Average Score:
-  <% let total = 0 %>
-  <% profile.golfRounds.forEach(golfRound => { %>
-  <% total += golfRound.score %>
-  <% }) %>
-  <%=(total / profile.golfRounds.length).toFixed(1) %>
-</h2>
+    <h2>
+      Average Score:
+      <% let total = 0 %>
+      <% profile.golfRounds.forEach(golfRound => { %>
+      <% total += golfRound.score %>
+      <% }) %>
+      <%=(total / profile.golfRounds.length).toFixed(1) %>
+    </h2>
   <section id="round-score-section">
     <% if (profile.golfRounds.length) { %>
       <h2>
         <%= isSelf ? "You played" : `${profile.name} has played` %> these rounds!
       </h2>
-      <% profile.golfRounds.forEach(golfRound => { %>
-        <h3 
-        class="profile-golf-rounds">
-        <%= `${golfRound.roundCourse}!  Score: ${golfRound.score}, Price: $${golfRound.price}` %>
-        </h3>
-          <form class="profile-delete-round" action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
+        <% profile.golfRounds.forEach(golfRound => { %>
+          <h3 
+            class="profile-golf-rounds">
+            <%= `${golfRound.roundCourse}!  Score: ${golfRound.score}, Price: $${golfRound.price}` %>
+          </h3>
+            <form class="profile-delete-round" action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
             <% if (isSelf) { %>
-            <button type="submit">Delete Round</button>
-          </form>
+              <button type="submit">Delete Round</button>
+            </form>
             <% } %>
-      <% })%>
+        <% })%>
     <% } %>
   <% if (isSelf) { %>
-    <h2>Add a golf Round</h2>
-    <form action="/profiles/<%= profile._id %>/golfRounds" method="POST">
-      <label>Course Name: 
-        <input type="text" name="roundCourse">
-      </label>
-      <label>
-        Score:
-        <input type="text" name="score">
-      </label>
-      <label>
-        Price:
-        <input type="text" name="price">
-      </label>
-      <button type="submit">Add golf round</button>
-    </form>
+      <h2>Add a golf Round</h2>
+        <form action="/profiles/<%= profile._id %>/golfRounds" method="POST">
+          <label>Course Name: 
+            <input type="text" name="roundCourse">
+          </label>
+          <label>
+            Score:
+            <input type="text" name="score">
+          </label>
+          <label>
+            Price:
+            <input type="text" name="price">
+          </label>
+          <button type="submit">Add golf round</button>
+        </form>
   <% } %>
   </section>
 </main>

@@ -4,35 +4,34 @@
 
 <main>
   <h1><%= course.courseName%></h1>
-  <h2><%= `${course.city}, ${course.state} ` %></h2>
-  <h5><%= `Posted by: ${course.owner.name} `%></h5>
-
-<h2>Reviews</h2>
-<ul>
-  <% course.reviews.forEach(review => { %> 
-    <li>
-      <%= review.reviewer %> <%=review.recommend ? '✅' : '❌' %> <p id="review-id"> "<%= review.content %> "</p>
-    </li>
-  <%})%>
-</ul>
-<h3>Add a Review</h3>
-<form 
-id="add-review-form" 
-action="/courses/<%= course._id %>/reviews"
-method="POST">
-<label for="name-review">Name:
-  <input type="text" name="reviewer">
-</label>
-<label for="content-textarea">Review:</label>
-<textarea name="content" id="content-textarea"></textarea>
-<label for="recommend-select">Recommend:
-  <input type="checkbox" name="recommend">
-</label>
-<button type="submit">Submit Review</button>
-</form>
-<p>
-  <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
-</p>
+    <h2><%= `${course.city}, ${course.state} ` %></h2>
+      <h5><%= `Posted by: ${course.owner.name} `%></h5>
+    <h2>Reviews</h2>
+      <ul>
+      <% course.reviews.forEach(review => { %> 
+        <li>
+        <%= review.reviewer %> <%=review.recommend ? '✅' : '❌' %> <p id="review-id"> "<%= review.content %> "</p>
+        </li>
+      <%})%>
+      </ul>
+    <h3>Add a Review</h3>
+      <form 
+        id="add-review-form" 
+        action="/courses/<%= course._id %>/reviews"
+        method="POST">
+        <label for="name-review">Name:
+          <input type="text" name="reviewer">
+        </label>
+        <label for="content-textarea">Review:</label>
+          <textarea name="content" id="content-textarea"></textarea>
+        <label for="recommend-select">Recommend:
+          <input type="checkbox" name="recommend">
+        </label>
+        <button type="submit">Submit Review</button>
+      </form>
+    <p>
+      <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
+    </p>
 </main>
 
 <%- include('../partials/footer') %>
