@@ -32,7 +32,7 @@ function update(req, res) {
       throw new Error("Not Authorized")
     }
   })
-    .catch((err) => {
+      .catch((err) => {
     console.log(err)
     res.redirect(`/courses`)
   })

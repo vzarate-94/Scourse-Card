@@ -5,17 +5,13 @@
 <main>
   <h1><%= course.courseName%></h1>
   <h2><%= `${course.city}, ${course.state} ` %></h2>
-    <h2>Scourse Card users who have played this course:</h2>
-    
+  <h5><%= `Posted by: ${course.owner.name} `%></h5>
 
-<p>
-  <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
-</p>
 <h2>Reviews</h2>
 <ul>
   <% course.reviews.forEach(review => { %> 
     <li>
-      <%= review.reviewer %> <%=review.recommend ? 'recommends' : 'does not recommend' %> this course. Review: "<%= review.content %> "
+      <%= review.reviewer %> <%=review.recommend ? '✅' : '❌' %> <p id="review-id"> "<%= review.content %> "</p>
     </li>
   <%})%>
 </ul>
@@ -34,6 +30,9 @@ method="POST">
 </label>
 <button type="submit">Submit Review</button>
 </form>
+<p>
+  <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
+</p>
 </main>
 
 <%- include('../partials/footer') %>
