@@ -150,17 +150,22 @@ a, a:visited, a:hover, a:active {
   justify-content: center;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 500px) {
   .welcome-main {
     color: green;
+    font-size: 22px;
+    text-align: center;
+    width: 375px;
+    margin-bottom: -90%;
   }
 
   nav {
-    width: 375px;
+    width: 100%;
     height: 200px;
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    text-align: center;
+    position: relative;
   }
 
   #main-index-body {
@@ -170,9 +175,44 @@ a, a:visited, a:hover, a:active {
     padding-top: 200px;
   }
   #intro-message {
-    width: 375px;
+    width: 345px;
     text-align: center;
     display: flex;
-}
+    font-size: 28px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #golf_cart {
+    width: 375px;
+  }
+
+  #logo-2 {
+    width: 375px;
+  }
+
+  #golf_courses {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+  }
+  #course-index-info {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    right: -4px;
+  }
+
+  .course-info {
+    padding-top: 25px;
+    padding-right: 100px;
+  }
+
+  #course_form {
+    margin-left: 30px;
+    padding: 5px;
+    align-content: center;
+  }
 
 }

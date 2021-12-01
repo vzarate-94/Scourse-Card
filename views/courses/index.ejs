@@ -2,16 +2,18 @@
 <link rel="stylesheet" href="/public/stylesheets/style.css">
 <%- include('../partials/nav') %>
 
-<main>
+<main id=golf_courses>
   <h1>Golf Courses</h1>
-    <ul>
+    <div><ol>
     <% courses.forEach(course => { %>
-      <li id="course-index-info" ><%= course.courseName %></li>
+      <span><li id="course-index-info" ><%= course.courseName %></li></span>
       <a class="course-info" href="/courses/<%= course._id %>">Course Details<i class="fas fa-golf-ball"></i></a>
-    </ul>
+    </ol></div>
     <% }) %>
     <% if (user) { %>
-  <h1>Enter a New Golf Course</h1>
+  
+  <div id=course_form>
+    <h1>Enter a New Golf Course</h1>
     <form action="/courses" method="POST">
       <label>Golf Course Name:
       <input type="text" name="courseName">
@@ -24,6 +26,7 @@
       </label><br>
       <button type="submit">Add Golf Course</button>
     </form>
+  </div>
     <% } %>
 </main>
 <%- include('../partials/footer') %>
