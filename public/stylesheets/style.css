@@ -149,3 +149,30 @@ a, a:visited, a:hover, a:active {
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 410px) {
+  .welcome-main {
+    color: green;
+  }
+
+  nav {
+    width: 375px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  #main-index-body {
+    background-image: url(https://i.imgur.com/aXFHIfb.jpg?2);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 200px;
+  }
+  #intro-message {
+    width: 375px;
+    text-align: center;
+    display: flex;
+}
+
+}
