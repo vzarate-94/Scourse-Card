@@ -215,4 +215,20 @@ a, a:visited, a:hover, a:active {
     align-content: center;
   }
 
+  #round-score-section {
+    width: 375px;
+  }
+
+  .profile-golf-rounds {
+    width: 375px;
+    align-content: center;
+    text-align: center;
+  }
+
+  #add_golf_round {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+
 }
