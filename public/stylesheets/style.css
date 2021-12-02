@@ -231,4 +231,21 @@ a, a:visited, a:hover, a:active {
     padding: 25px;
   }
 
+  #review-id {
+    width: 275px;
+    margin-right: 3px;
+    margin-left: 10px;
+  }
+
+  li {
+    width: 255px;
+  }
+
+  #add-review-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 290px;
+  }
+
 }
