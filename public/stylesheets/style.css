@@ -205,8 +205,7 @@ a, a:visited, a:hover, a:active {
   }
 
   .course-info {
-    padding-top: 25px;
-    padding-right: 100px;
+  bottom: 3px;
   }
 
   #course_form {
