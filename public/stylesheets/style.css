@@ -40,7 +40,7 @@ body {
   height: 100px;
   background-position: 0px 0px;
   background-repeat: repeat-x;
-  animation: animatedBackground 10s linear infinite alternate;
+  animation: animatedBackground 20s linear infinite alternate;
 }
 
 nav {
