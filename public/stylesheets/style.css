@@ -40,7 +40,7 @@ body {
   height: 100px;
   background-position: 0px 0px;
   background-repeat: repeat-x;
-  animation: animatedBackground 20s linear infinite alternate;
+  animation: animatedBackground 15s linear infinite alternate;
 }
 
 nav {
@@ -112,16 +112,16 @@ a, a:visited, a:hover, a:active {
   position: relative;
   text-align: center;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   flex-direction: row;
   right: 170px;
 }
 
 .course-info {
   position: relative;
-  bottom: 26px;
+  bottom: 32px;
   left: 130px;
-  display: inline;
+  text-align: center;
 }
 
 #review-id {
