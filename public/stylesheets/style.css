@@ -60,7 +60,7 @@ nav {
 
 .welcome-main {
   color: rgb(255, 249, 242);
-  font-size: 5.2rem;
+  font-size: 7.2rem;
   padding-top: 100px;
   padding-bottom: 550px;
 }
@@ -142,6 +142,11 @@ a, a:visited, a:hover, a:active {
   justify-content: center;
   align-content: center;
   width: 1000px;
+}
+
+#golf_cart {
+  border-radius: 20px;
+  border: 5px solid green;
 }
 
 #profile-show-img {
