@@ -2,20 +2,25 @@
 <link rel="stylesheet" href="/public/stylesheets/style2.css">
 <%- include('../partials/nav') %>
 
-<main id=golf_courses>
-  <div id="course-main-page"></div>
-  <h1>Golf Courses</h1>
-    <% courses.forEach(course => { %>
-    
-    <ul>
-      <li id="course-index-info" ><%= course.courseName %></li>
-      <a class="course-info" href="/courses/<%= course._id %>">Course Details<i class="fas fa-golf-ball"></i></a>
-      <img src="<%= course.img %>" style="width: 50px;">
-    </ul>
+<main id="golf-courses-index">
+    <h1>Golf Courses</h1>
+      
+    <div class="course-container">
+      <% courses.forEach(course => { %>
+      <ul>
+        
+        <li class="course-index-info" >
+          <img src="<%= course.img %>" style="width: 400px; height: 300px; border: 3px solid darkgreen;">
+          <a 
+            class="course-info" 
+            href="/courses/<%= course._id %>"><%= course.courseName %></a>
+        </li>
+      </ul>
     <% }) %>
+  </div>
     <% if (user) { %>
-    </div>
-  <div id=course_form>
+
+  <div id="course_form">
     <h1>Enter a New Golf Course</h1>
     <form action="/courses" method="POST">
       <label>Golf Course Name:
