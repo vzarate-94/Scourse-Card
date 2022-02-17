@@ -1,18 +1,20 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/public/stylesheets/style.css">
+<link rel="stylesheet" href="/public/stylesheets/style2.css">
 <%- include('../partials/nav') %>
 
 <main id=golf_courses>
+  <div id="course-main-page"></div>
   <h1>Golf Courses</h1>
-    
     <% courses.forEach(course => { %>
+    
     <ul>
       <li id="course-index-info" ><%= course.courseName %></li>
       <a class="course-info" href="/courses/<%= course._id %>">Course Details<i class="fas fa-golf-ball"></i></a>
+      <img src="<%= course.img %>" style="width: 50px;">
     </ul>
     <% }) %>
     <% if (user) { %>
-  
+    </div>
   <div id=course_form>
     <h1>Enter a New Golf Course</h1>
     <form action="/courses" method="POST">

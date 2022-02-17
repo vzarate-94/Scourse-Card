@@ -77,10 +77,6 @@ h1 {
   margin-top: 100px;
 }
 
-img {
-  width: 600px;
-}
-
 section {
   display: flex;
   align-items: center;
@@ -121,11 +117,21 @@ a, a:visited, a:hover, a:active {
   right: 170px;
 }
 
+
+
 .course-info {
   position: relative;
   bottom: 32px;
   left: 130px;
   text-align: center;
+}
+
+#course-img {
+  width: 400px;
+  position: fixed;
+  margin-left: -35%;
+  margin-top: -15%;
+  border: 3px solid darkgreen;
 }
 
 #review-id {
@@ -156,6 +162,7 @@ a, a:visited, a:hover, a:active {
 #profile-show-img {
   border-radius: 30px;
   border: 2px solid rgb(4, 82, 4);
+  width: 100px;
 }
 
 #logo-2 {

@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+    font-size: 62.5%
+}
+
+body {
+  background-color: rgba(249, 249, 13, .15);
+  color: rgb(4, 82, 4);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+/* Below is styling for the front page except */
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+#main-index-body {
+  background-image: url(../images/golfcourse.jpg);
+  width: 100%;
+  height: 100px;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 15s linear infinite alternate;
+}
+
+#front-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#welcome-main-message {
+  color: rgb(255, 249, 242);
+  font-size: 7.2rem;
+  padding-top: 100px;
+  padding-bottom: 550px;
+}
+
+#intro-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 15%;
+  margin-left: 15%;
+  text-align: center;
+}
+
+#golf_cart {
+  border-radius: 20px;
+  border: 5px solid green;
+}
+
+strong {
+  font-size: 3.5rem;
+}
+
+/* Styling for home page above */
+
+/* Styling for footer below */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* styling for footer above */
+
+/* styling for  */

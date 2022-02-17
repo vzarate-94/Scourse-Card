@@ -1,10 +1,10 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/public/stylesheets/style.css">
+<link rel="stylesheet" href="/public/stylesheets/style2.css">
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= course.courseName%></h1>
-  <img src="<%= course.img%>" alt="">
+  <img id="course-img" src="<%= course.img%>" alt="">
     <h2><%= `${course.city}, ${course.state} ` %></h2>
       <h5><%= `Posted by: ${course.owner.name} `%></h5>
     <h2>Reviews</h2>

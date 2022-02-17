@@ -30,8 +30,9 @@ div {
 }
 
 .profile-icon {
-  border-radius: 35px;
+  border-radius: 30px;
   border: 2px solid rgb(4, 82, 4);
+  width: 100px;
 }
 
 p {
