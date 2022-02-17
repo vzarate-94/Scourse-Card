@@ -20,6 +20,7 @@ const courseSchema = new mongoose.Schema({
   },
   city: String,
   state: String,
+  img: String,
   reviews: [reviewSchema],
   owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
 }, {
