@@ -96,6 +96,12 @@ strong {
 
 /* styling for course index page */
 
+#golf-courses-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .course-container {
   display: grid;
