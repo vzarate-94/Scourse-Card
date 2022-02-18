@@ -101,7 +101,7 @@ strong {
 
 /* styling for course index page */
 
-#golf-courses-index {
+.golf-main-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,10 +172,18 @@ nav {
   margin-right: -13%;
 }
 
+/* Stying for nav bar above */
+
+#profile-index-main {
+  padding-top: 5%;
+}
+
 .profile-container {
   display: grid;
   grid-template-columns: 30.3% 33.3% 33.3%;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
 }
 

@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="stylesheets/profiles.css">
 <%- include('../partials/nav') %>
 
-<main id="golf-courses-index">
+<main id="profile-index-main" class="golf-main-index">
   <h1>Public Profiles</h1>
-  <div class="course-container"></div>
+  <div class="profile-container">
+    
     <% profiles.forEach(profile => { %>
     <ul>
       <a href="/profiles/<%= profile._id %>">
