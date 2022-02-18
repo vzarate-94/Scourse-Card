@@ -168,6 +168,10 @@ nav {
   margin-top: -10%;
 }
 
+#nav-logged-in {
+  margin-right: -13%;
+}
+
 .profile-container {
   display: grid;
   grid-template-columns: 30.3% 33.3% 33.3%;
