@@ -10,7 +10,8 @@
       <ul>
       <% course.reviews.forEach(review => { %> 
         <li>
-        <%= review.reviewer %> <%=review.recommend ? '✅' : '❌' %> <p id="review-id"> "<%= review.content %> "</p>
+        <%= review.reviewer %> <%=review.recommend ? '✅' : '❌' %> 
+        <p id="review-id">"<%= review.content %> "</p>
         </li>
       <%})%>
       </ul>
@@ -29,9 +30,10 @@
         </label>
         <button type="submit">Submit Review</button>
       </form>
+      <% if (user) { %>
     <p>
       <a class="link" href="/courses/<%= course._id %>/edit">Edit Course</a>
     </p>
+    <% } %>
 </main>
 
-<%- include('../partials/footer') %>

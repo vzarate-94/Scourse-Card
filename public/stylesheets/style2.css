@@ -128,9 +128,22 @@ strong {
 
 #course-img {
   width: 40%;
+  height: 50%;
   margin-left: -40%;
   position: fixed;
   margin-top: -15%;
   border: 3px solid darkgreen;
+}
+
+#review-id {
+  background-color: aliceblue;
+  border: 2px solid darkgray;
+}
+
+#add-review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
 }
 
