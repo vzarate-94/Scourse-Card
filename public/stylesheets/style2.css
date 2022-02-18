@@ -23,6 +23,11 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.9rem;
   margin: 0;
+  margin-top: 10%;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
 
 li {
@@ -131,7 +136,7 @@ strong {
   height: 50%;
   margin-left: -40%;
   position: fixed;
-  margin-top: -15%;
+  margin-top: -5%;
   border: 3px solid darkgreen;
 }
 
@@ -147,3 +152,19 @@ strong {
   width: 90%;
 }
 
+/* Nav bar style below */
+
+nav {
+  
+  background-color: rgba(183,207,156,255);
+  border: 2px solid rgb(4, 82, 4);
+  font-family: 'Poppins';
+  height: 78px;
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  margin-top: -10%;
+}
