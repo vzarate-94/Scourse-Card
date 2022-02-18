@@ -174,6 +174,8 @@ nav {
 
 /* Stying for nav bar above */
 
+/* styling for golfers index page below */
+
 #profile-index-main {
   padding-top: 5%;
 }
@@ -187,3 +189,27 @@ nav {
   justify-content: center;
 }
 
+/* stylling for golfers index page above */
+
+/* styling for golfers show page below */
+
+#profile-show-main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#profile-show-img {
+  border: 2px solid darkgreen;
+  border-radius: 20%;
+  position: fixed;
+}
+
+#average-score {
+  position: fixed;
+  margin-left: 20%;
+  margin-top: 8%;
+}

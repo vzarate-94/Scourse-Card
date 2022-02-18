@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<main id="golf-courses-index">
+<main id="profile-show-main">
   <% if (profile.avatar) { %>
     <div>
       <img 
@@ -12,7 +12,8 @@
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? 'you, Welcome to your profile' : profile.name %>!</h1>
+  <h1><%= isSelf ? 'Welcome to your profile' : profile.name %></h1>
+    <div id="average-score">
     <h2>
       Average Score:
       <% let total = 0 %>
@@ -21,6 +22,12 @@
       <% }) %>
       <%=(total / profile.golfRounds.length).toFixed(1) %>
     </h2>
+    <h2>
+      Rounds played:
+      <%= profile.golfRounds.length %>
+    </h2>
+  </div>
+    <h2></h2>
     <!-- Section above is the calculator for getting average golf score! -->
   <section id="round-score-section">
     <% if (profile.golfRounds.length) { %>
