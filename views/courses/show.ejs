@@ -2,11 +2,10 @@
 <link rel="stylesheet" href="/public/stylesheets/style2.css">
 <%- include('../partials/nav') %>
 
-<main>
+<main class="course-show-page">
   <h1><%= course.courseName%></h1>
   <img id="course-img" src="<%= course.img%>" alt="">
     <h2><%= `${course.city}, ${course.state} ` %></h2>
-      <h5><%= `Posted by: ${course.owner.name} `%></h5>
     <h2>Reviews</h2>
       <ul>
       <% course.reviews.forEach(review => { %> 

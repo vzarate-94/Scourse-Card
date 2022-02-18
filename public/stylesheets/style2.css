@@ -105,9 +105,32 @@ strong {
 
 .course-container {
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 30% 30% 30%;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0%;
+  margin: 1%;
   min-height: 50vh;
 }
+
+/* styling for course index page above */
+
+/* styling for course show page */
+
+.course-show-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 55%;
+  width: 30%;
+  margin-top: 5%;
+}
+
+#course-img {
+  width: 40%;
+  margin-left: -40%;
+  position: fixed;
+  margin-top: -15%;
+  border: 3px solid darkgreen;
+}
+
