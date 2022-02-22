@@ -131,8 +131,8 @@ strong {
 }
 
 #course-img {
-  width: 40%;
-  height: 50%;
+  width: 500px;
+  height: 400px;
   margin-left: -40%;
   position: fixed;
   margin-top: -5%;
@@ -248,5 +248,13 @@ nav {
 
   #golf_cart {
     width: 80%;
+  }
+
+  #course-img {
+    width: 150px;
+    height: 125px;
+    position: flex;
+    justify-content:center ;
+    border: 3px solid darkgreen;
   }
 }
