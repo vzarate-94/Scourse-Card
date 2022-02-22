@@ -227,3 +227,9 @@ nav {
     margin-right: 10%;
   }
 }
+
+@media only screen and (max-width: 550px) {
+  #nav-logged-in {
+    display: none;
+  }
+}
