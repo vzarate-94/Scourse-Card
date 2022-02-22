@@ -10,6 +10,6 @@ export {
 const router = Router()
 
 router.get('/', profilesCtrl.index)
-router.get('/:id', isLoggedIn, profilesCtrl.show)
+router.get('/:id', profilesCtrl.show)
 router.post('/:id/golfRounds', isLoggedIn, profilesCtrl.createGolfRounds)
 router.delete('/golfRounds/:id', isLoggedIn, profilesCtrl.deleteGolfRounds)

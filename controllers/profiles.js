@@ -38,7 +38,6 @@ function createGolfRounds(req, res) {
   })
 }
 
-
 function show(req,res) {
   Profile.findById(req.params.id)
   .then((profile) => {
@@ -55,7 +54,7 @@ function show(req,res) {
   })
   .catch((err) => {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/profiles')
   })
 }
 

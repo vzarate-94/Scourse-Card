@@ -213,3 +213,17 @@ nav {
   margin-left: 20%;
   margin-top: 8%;
 }
+
+/* Styling for golfers show page above */
+
+/* Mobile responsiveness below */
+/* Mobile responsivness primarly is needed in the courses index page */
+
+@media only screen and (max-width: 1400px) {
+  
+  .course-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+}
