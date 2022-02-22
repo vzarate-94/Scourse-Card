@@ -232,4 +232,20 @@ nav {
   #nav-logged-in {
     display: none;
   }
+
+  .fas {
+    display: none;
+  }
+
+  .nav-names {
+    font-size: x-small;
+  }
+
+  #welcome-main-message {
+    font-size: 3.5rem;
+  }
+
+  #golf_cart {
+    width: 80%;
+  }
 }

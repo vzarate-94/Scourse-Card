@@ -4,9 +4,9 @@
 </head>
 <body>
   <nav>
-    <a href="/"><i class="fas fa-vihara"></i> HOME</a>
-    <a href="/courses"><i class="fas fa-golf-ball"></i> COURSES</a>
-    <a href="/profiles"><i class="fas fa-user-circle"></i></i> GOLFERS</a>
+    <a class="nav-names" href="/"><i class="fas fa-vihara"></i> HOME</a>
+    <a class="nav-names" href="/courses"><i class="fas fa-golf-ball"></i> COURSES</a>
+    <a class="nav-names" href="/profiles"><i class="fas fa-user-circle"></i></i> GOLFERS</a>
     <% if (user) { %>
       <p id="nav-logged-in">Hello, <%=user.profile.name %></p>
     <a href="/auth/logout">
