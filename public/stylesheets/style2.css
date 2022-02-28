@@ -155,7 +155,7 @@ strong {
 
 nav {
   
-  background-color: rgb(123, 121, 121);
+  background-color: rgb(177, 177, 177);
   color: white;
   border: 2px solid rgb(4, 82, 4);
   font-family: 'Poppins';
@@ -167,6 +167,11 @@ nav {
   position: fixed;
   width: 100%;
   margin-top: -10%;
+  text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
   text-decoration: none;
 }
 
