@@ -156,6 +156,7 @@ strong {
 nav {
   
   background-color: rgb(123, 121, 121);
+  color: white;
   border: 2px solid rgb(4, 82, 4);
   font-family: 'Poppins';
   height: 78px;
@@ -166,6 +167,7 @@ nav {
   position: fixed;
   width: 100%;
   margin-top: -10%;
+  text-decoration: none;
 }
 
 #nav-logged-in {
