@@ -175,6 +175,10 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+a:hover {
+  color: darkgreen;
+}
+
 #nav-logged-in {
   margin-right: -13%;
 }
