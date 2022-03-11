@@ -7,6 +7,7 @@
     <div class="course-container">
       <% courses.forEach(course => { %>
       <ul>
+        <div class="img-card">
         <a href="/courses/<%= course._id %>">
           <li class="course-index-info" >
           <img src=" <%= course.img === "" ? "https://www.hotelroanoke.com/i/SITE_160212_10485664_PSYN1/content/CMS_02122016_105756563_RS0G0/78380B0E-983D-0F11-C5E92761DED6C56D.JPG" : course.img %>" style="width: 400px; height: 300px; border: 3px solid darkgreen;"></a>
@@ -14,6 +15,7 @@
             class="course-info" 
             href="/courses/<%= course._id %>"><%= course.courseName %></a>
         </li>
+      </div>
       </ul>
     <% }) %>
   </div>
