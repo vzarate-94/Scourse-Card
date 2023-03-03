@@ -7,7 +7,8 @@ export {
 const golfRoundsSchema = new mongoose.Schema({
   roundCourse: String,
   score: Number,
-  price: Number,
+  courseRating: Number,
+  slopeRating: Number,
 })
 
 

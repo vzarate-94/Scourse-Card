@@ -51,7 +51,7 @@ li {
   height: 100px;
   background-position: 0px 0px;
   background-repeat: repeat-x;
-  animation: animatedBackground 15s linear infinite alternate;
+  animation: animatedBackground 25s linear infinite alternate;
 }
 
 #front-page {
