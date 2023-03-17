@@ -37,7 +37,7 @@
         <% profile.golfRounds.forEach(golfRound => { %>
           <h3 
             class="profile-golf-rounds">
-            <%= `${golfRound.roundCourse}!  Score: ${golfRound.score}, Price: $${golfRound.price}` %>
+            <%= `${golfRound.roundCourse}!  Score: ${golfRound.score}, Course Rating: $${golfRound.courseRating}` %>
           </h3>
             <form class="profile-delete-round" action="/profiles/golfRounds/<%= golfRound._id %>?_method=DELETE" method="POST">
             <% if (isSelf) { %>
@@ -57,8 +57,12 @@
             <input type="number" name="score">
           </label>
           <label>
-            Price:
-            <input type="number" name="price">
+            Course Rating:
+            <input type="number" name="courseRating">
+          </label>
+          <label>
+            Course Slope:
+            <input type="number" name="courseSlope">
           </label>
           <button type="submit">Add golf round</button>
         </form>
